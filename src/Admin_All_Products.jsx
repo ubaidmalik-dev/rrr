@@ -37,7 +37,7 @@ const Admin_All_Products = () => {
 
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
-        const response = await fetch(`https://mmtrjy-3000.csb.app/user/admin/products${id}`, {
+        const response = await fetch(`https://mmtrjy-3000.csb.app/user/admin/products/${id}`, {
           method: "DELETE",
         });
 

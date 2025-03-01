@@ -53,12 +53,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero handleOrderPopup={handleOrderPopup} />
-                <Products />
-                <TopProducts handleOrderPopup={handleOrderPopup} />
-                <Banner />
-                <Subscribe />
-                <Testimonials />
+                <Admin />
                 <Footer />
               </>
             }
