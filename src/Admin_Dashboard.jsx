@@ -97,19 +97,21 @@ const About_Page = () => {
                       <div key={index} className="border border-gray-300 rounded p-2 mb-2 flex items-center">
                         {prod.productId && prod.productId.name ? (
                           <>
-                            <img src={`https://mmtrjy-3000.csb.app${prod.productId.picture}`} 
-                              alt={prod.productId.name} className="w-16 h-16 object-cover rounded mr-2" 
+                            <img 
+                              src={`https://mmtrjy-3000.csb.app${prod.productId.picture}`} 
+                              alt={prod.productId.name} 
+                              className="w-16 h-16 object-cover rounded mr-2" 
                             />
                             <div>
-                              <p className="font-semibold">{prod.productId.name}</p>
+                              <p className="font-semibold">Product Name: {prod.productId.name}</p>
+                              <p><span className="font-semibold">Product ID:</span> {prod.productId._id}</p> {/* Product ID added here */}
                               <p>Quantity: {prod.quantity}</p>
-                              {/* Show Size Inside Product List */}
                               <p><span className="font-semibold">Size:</span> {prod.size || "N/A"}</p>
                             </div>
                           </>
                         ) : (
                           <div>
-                            <p className="font-semibold">Product ID: {prod.productId}</p>
+                            <p><span className="font-semibold">Product ID:</span> {prod.productId || "Unknown"}</p> {/* Product ID explicitly mentioned */}
                             <p>Quantity: {prod.quantity}</p>
                             <p><span className="font-semibold">Size:</span> {prod.size || "N/A"}</p>
                           </div>
