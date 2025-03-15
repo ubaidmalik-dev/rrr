@@ -75,8 +75,7 @@ const Navbar = () => {
       {/* Sliding Discount Bar */}
       <div className="w-full bg-red-500 text-white text-center py-2 overflow-hidden">
         <marquee scrollamount="5" className="text-sm font-semibold">
-          🎉 Limited Time Offer: Get 20% OFF on all products! {" "}
-          <span className="font-bold">#SALE20</span> 🎉
+          😎 Admin Dashboad, Only admin can access due to security reasons
         </marquee>
       </div>
 
