@@ -90,7 +90,6 @@ const About_Page = () => {
                     <p><span className="font-semibold">Phone:</span> {order.customerPhone}</p>
                     <p><span className="font-semibold">Address:</span> {order.customerAddress}</p>
                     <p><span className="font-semibold">Total Price:</span> {order.totalPrice} RS</p>
-                    <p><span className="font-semibold">Size:</span> {order.products[0]?.size || "N/A"}</p> {/* 🔹 Moved here after Total Price */}
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Products:</h3>
@@ -98,16 +97,21 @@ const About_Page = () => {
                       <div key={index} className="border border-gray-300 rounded p-2 mb-2 flex items-center">
                         {prod.productId && prod.productId.name ? (
                           <>
-                            <img src={`https://mmtrjy-3000.csb.app${prod.productId.picture}`} alt={prod.productId.name} className="w-16 h-16 object-cover rounded mr-2" />
+                            <img src={`https://mmtrjy-3000.csb.app${prod.productId.picture}`} 
+                              alt={prod.productId.name} className="w-16 h-16 object-cover rounded mr-2" 
+                            />
                             <div>
                               <p className="font-semibold">{prod.productId.name}</p>
                               <p>Quantity: {prod.quantity}</p>
+                              {/* Show Size Inside Product List */}
+                              <p><span className="font-semibold">Size:</span> {prod.size || "N/A"}</p>
                             </div>
                           </>
                         ) : (
                           <div>
                             <p className="font-semibold">Product ID: {prod.productId}</p>
                             <p>Quantity: {prod.quantity}</p>
+                            <p><span className="font-semibold">Size:</span> {prod.size || "N/A"}</p>
                           </div>
                         )}
                       </div>
